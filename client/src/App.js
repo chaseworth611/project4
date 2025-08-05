@@ -12,7 +12,7 @@ function App() {
    <>  
       <BrowserRouter>
       <Routes>
-          <Route path="/home" element={isLoggedIn ? <CategoryList  /> : <Navigate to="/login" />} />
+          <Route path="/home" element={<CategoryList />} />
           <Route path="/login" element={<Login isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>} />
           {/* <Route path="register" element={<RegisterPage />} /> */}
       </Routes>

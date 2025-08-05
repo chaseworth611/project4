@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import db from './dbConnection.js'
 import userRoutes from './Routers/user.js';
+import categoryRoutes from './Routers/category.js'
 // Add and import your route files here, Example:
 // import yourRoute from './Routers/yourRoute.js'
 
@@ -10,6 +11,7 @@ const app = express();
 app.use(express.json());  // To parse JSON bodies in requests
 app.use(cors());   
 app.use("/api/login", userRoutes)      // To allow requests from all origins (good for development)
+app.use("/categories", categoryRoutes)
 
 // Add your route handlers here, Example:
 // app.use('/your-endpoint', yourRoute)
